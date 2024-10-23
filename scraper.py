@@ -23,7 +23,7 @@ browser.get(url)
 
 # find the search field element and fill it with the search query
 search_field = WebDriverWait(browser, 10).until(EC.presence_of_element_located((By.ID, "propertySearchOptions_searchText")))
-search_field.send_keys(property_addr) # replace 'your_search_text' with your actual search text
+search_field.send_keys(property_addr) 
 
 # submit the form
 search_field.send_keys(Keys.RETURN)
@@ -34,7 +34,7 @@ WebDriverWait(browser, 10).until(EC.title_contains('Property Search Results')) #
 # get the page source
 html = browser.page_source
 
-# you can now use the page source in BeautifulSoup or close the browser
+
 soup = BeautifulSoup(html, 'html.parser')
 
 # Find the span tag with prop_id attribute
